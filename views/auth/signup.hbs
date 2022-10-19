@@ -1,12 +1,12 @@
 <div>
-    <h2>Account register page</h2>
+  <h2>Account register page</h2>
   <form action="/auth/signup" method="POST">
 
     <label for="username">Name:</label>
     <input type="text" name="username" />
     <br />
     <label for="email">Email:</label>
-    <input type="text" name="email" autocomplete="off"/>
+    <input type="text" name="email" autocomplete="off" />
     <br />
     <label for="password">Password:</label>
     <input type="password" name="password" />
@@ -14,7 +14,7 @@
     <label for="passwordConfirmation">passwordConfirmation:</label>
     <input type="password" name="passwordConfirmation" />
     <br />
-   <p style="color: red">{{errorMessage}}</p>
+    <p style="color: red">{{errorMessage}}</p>
 
     <button>Sign up</button>
 
