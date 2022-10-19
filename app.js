@@ -23,7 +23,17 @@ const projectName = 'lab-express-basic-auth';
 const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
-
+// Activate middleware
+app.use((req, res, next)=> {
+    // let us know if user is on or not
+        if( req.session.userOnline === undefined) {
+        res.locals.isUserActive = false
+     } else {
+        res.locals.isUserActive = true
+     }
+     next()
+    
+    })
 // 👇 Start handling routes here
 const index = require('./routes/index');
 app.use('/', index);

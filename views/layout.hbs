@@ -11,6 +11,20 @@
 
   <body>
 
+    <nav>
+
+      {{#if isUserActive}}
+      <a href="/profile">Show profile</a>
+      <a href="/auth/logout">Log out</a>
+      <a href="/profile/main">Main</a>
+      <a href="/profile/private">Private</a>
+      {{else}}
+      <a href="/auth/signup">Sign in</a>
+      <a href="/auth/login">Log in</a>
+
+      {{/if}}
+    </nav>
+
     {{{body}}}
 
     <script src="/js/script.js"></script>
